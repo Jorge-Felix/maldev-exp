@@ -4,7 +4,7 @@
 __attribute__((section(".text")))
 void entry(void)
 {
-    //resolver GetProcAddress y LoadLibraryA por hash
+    //resolve GetProcAddress and LoadLibraryA by hash
     HMODULE k32 = 0;
     FN_GetProcAddress GetProcAddr =
         (FN_GetProcAddress)ldr_get_by_hash(HASH_GETPROCADDRESS, (void**)&k32);
