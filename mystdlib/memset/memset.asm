@@ -1,3 +1,4 @@
+;void *memset(void *ptr, int value, size_t num);
 default rel 
 global memset
 
