@@ -2,20 +2,22 @@ default rel
 
 ;size_t strlen(const char *str);
 section .text
+
 global optistrlen
+
 optistrlen:
+    push rdi
+
     mov rdi, rcx
     mov r9, rcx
 
-    xor al, al
+    xor eax, eax
     mov rcx, -1
 
-    cld  ; clear df
-
-    repne scasb 
+    repne scasb
 
     sub rdi, r9
-    dec rdi
+    lea rax, [rdi - 1]
 
-    mov rax, rdi
+    pop rdi
     ret
