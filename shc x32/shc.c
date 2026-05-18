@@ -14,7 +14,7 @@ void entry(void)
         (FN_LoadLibraryA)ldr_get_by_hash(HASH_LOADLIBRARYA, 0);
     if (!LoadLib) return;
 
-    //payload ->
+    //payload 
 
     SSTR(sUser32, 'u','s','e','r','3','2','.','d','l','l',0);
     HMODULE user32 = LoadLib((LPCSTR)sUser32);
