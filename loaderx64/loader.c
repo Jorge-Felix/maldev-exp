@@ -1,5 +1,5 @@
 #include "ldr.h"
-#include "payload.c" // shellcode is meant to be an unsigned char array
+#include "payload.c" // unsigned char array
 
 #define TRUE  1
 #define FALSE 0
